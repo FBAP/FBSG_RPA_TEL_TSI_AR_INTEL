@@ -3,7 +3,7 @@
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="io_Browser" Type="InOutArgument(ui:Browser)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>912,1305.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>948,1935.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -67,23 +67,23 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Navigating to TSI Portal Homepage" sap:VirtualizedContainerService.HintSize="782,1240.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
+  <Sequence DisplayName="Navigating to TSI Portal Homepage" sap:VirtualizedContainerService.HintSize="958,1870.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope DisplayName="Retry Scope || Until TSI Home Page" sap:VirtualizedContainerService.HintSize="740,1148.66666666667" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[CInt(in_Config(&quot;Numberofretry&quot;))]" RetryInterval="[TimeSpan.FromSeconds(CInt(in_Config(&quot;RetryInterval&quot;)))]">
+    <ui:RetryScope DisplayName="Retry Scope || Until TSI Home Page" sap:VirtualizedContainerService.HintSize="916,1778.66666666667" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[CInt(in_Config(&quot;Numberofretry&quot;))]" RetryInterval="[TimeSpan.FromSeconds(CInt(in_Config(&quot;RetryInterval&quot;)))]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action || till TSI Homepage" sap:VirtualizedContainerService.HintSize="698,935.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <Sequence DisplayName="Action || till TSI Homepage" sap:VirtualizedContainerService.HintSize="874,1565.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process || Chrome" sap:VirtualizedContainerService.HintSize="656,52.6666666666667" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="[in_Config(&quot;KillProcessNameChrome&quot;).ToString]">
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process || Chrome" sap:VirtualizedContainerService.HintSize="832,52.6666666666667" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="[in_Config(&quot;KillProcessNameChrome&quot;).ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -91,13 +91,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:KillProcess>
-            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser || Chrome" sap:VirtualizedContainerService.HintSize="656,750.666666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[io_Browser]" Url="[in_Config(&quot;TSIPortalURL&quot;).ToString]">
+            <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser || Chrome" sap:VirtualizedContainerService.HintSize="832,1380.66666666667" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[io_Browser]" Url="[in_Config(&quot;TSIPortalURL&quot;).ToString]">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="622,648" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="798,1278" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="IsSignInPopupExist" />
                     </Sequence.Variables>
@@ -106,8 +106,8 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window || chrome" sap:VirtualizedContainerService.HintSize="580,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ' click on Restore pages popup'" sap:VirtualizedContainerService.HintSize="580,52.6666666666667" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window || chrome" sap:VirtualizedContainerService.HintSize="756,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click ' click on Restore pages popup'" sap:VirtualizedContainerService.HintSize="756,52.6666666666667" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -132,7 +132,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:Click>
-                    <ui:UiElementExists DisplayName="Element Exists 'Sign In Popup'" Exists="[IsSignInPopupExist]" sap:VirtualizedContainerService.HintSize="580,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists DisplayName="Element Exists 'Sign In Popup'" Exists="[IsSignInPopupExist]" sap:VirtualizedContainerService.HintSize="756,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c8dd5c4d-90eb-4610-b627-f297b731feb2" InformativeScreenshot="e0d0c953c3d33844e75feca1b2ecb50f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='tsiiserp8909.asia.tel.com/apps_live/trp/rpa_customer_invoice/rpa*' /&gt;&lt;ctrl name='Sign in' role='dialog' /&gt;&lt;ctrl role='pane' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -150,7 +150,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:UiElementExists>
-                    <If Condition="[IsSignInPopupExist]" DisplayName="If || check signin popup existance" sap:VirtualizedContainerService.HintSize="580,255.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[IsSignInPopupExist]" DisplayName="If || check signin popup existance" sap:VirtualizedContainerService.HintSize="756,885.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,14 +158,38 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Signin with log" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence DisplayName="Signin with log" sap:VirtualizedContainerService.HintSize="376,724.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:LogMessage DisplayName="Log Message || Msg signin popup exist" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Info: SignIn Certificate popup exist&quot;]" />
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'Username'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[in_Config(&quot;UserName_TSIPortal&quot;).ToString]">
+                            <ui:SetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6176fd97-2fa5-4205-b3c9-a0c6ca66d029" InformativeScreenshot="382374d24e3ddacbc1d5aa1a13e1fdb0" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='tsiiserp8909.asia.tel.com/apps_live/trp/prod_list/prod_list.php *' /&gt;&lt;ctrl name='Sign in' role='dialog' /&gt;&lt;ctrl name='Username' role='editable text' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SetValue.Target>
+                          </ui:SetValue>
+                          <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text ' Password'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[in_Config(&quot;Password_TSIPortal&quot;).ToString]">
+                            <ui:SetValue.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="21c6aeff-1f9f-4a31-afda-5aec65b9e819" InformativeScreenshot="95ecf22e7b35908a6dd7d25199c653a8" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' omit:title='tsiiserp8909.asia.tel.com/apps_live/trp/prod_list/prod_list.php *' /&gt;&lt;ctrl name='Sign in' role='dialog' /&gt;&lt;ctrl name='Password' role='editable text' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SetValue.Target>
+                          </ui:SetValue>
                           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
